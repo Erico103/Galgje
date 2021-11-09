@@ -8,7 +8,7 @@ const wordList = [
   "telefoon",
   "moeder",
   "snoer",
-  "geeuw"
+  "geeuw",
 ];
 
 const maxGuesses = 5;
@@ -18,7 +18,7 @@ class AppContainer extends React.Component {
     chosenWord: "",
     guessedLetters: [],
     currentChosenLetter: "",
-    maxGuesses: maxGuesses
+    maxGuesses: maxGuesses,
   };
 
   chooseWord(list) {
@@ -31,7 +31,7 @@ class AppContainer extends React.Component {
     this.setState({
       chosenWord: this.chooseWord(wordList),
       guessedLetters: [],
-      currentChosenLetter: ""
+      currentChosenLetter: "",
     });
   };
 
@@ -50,7 +50,7 @@ class AppContainer extends React.Component {
       const newGuessedLetters = [...this.state.guessedLetters];
       newGuessedLetters.push(this.state.currentChosenLetter);
       this.setState({
-        guessedLetters: newGuessedLetters
+        guessedLetters: newGuessedLetters,
       });
     }
     this.setState({ currentChosenLetter: "" });
